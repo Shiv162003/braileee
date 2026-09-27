@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#camera {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  pointer-events: none;
+}
+
+#start-btn {
+  pointer-events: auto;
+  font-size: 8vw;
+  padding: 0.8em 1.6em;
+  border-radius: 999px;
+  border: none;
+  background: #ffcc00;
+  color: #000;
+  font-weight: 700;
+  min-width: 44vw;
+  min-height: 20vw;
+}
+
+#start-btn:active {
+  background: #e6b800;
+}
+
+#start-btn.hidden {
+  display: none;
+}
+
+#status {
+  pointer-events: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-size: 4.5vw;
+  text-align: center;
+  max-width: 90vw;
+}
